@@ -21,6 +21,7 @@ function App() {
 	const [data, setData] = useLocalStorage('data');
 
 	const updateData = (item) => {
+		console.log(item);
 		if (!item.id) {
 			if (data) {
 				setData([...data, {
@@ -32,7 +33,7 @@ function App() {
 					id: data.length ? Math.max(...data.map(i => i.id)) + 1 : 1
 				}]);
 			} else {
-				setData([...data, {
+				setData([{
 					post: item.post,
 					title: item.title,
 					date: item.date,

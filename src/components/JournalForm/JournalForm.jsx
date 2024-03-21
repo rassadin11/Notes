@@ -59,11 +59,12 @@ const JournalForm = ({setData, removePost}) => {
 				setModifyPost();
 				dispatchForm({type: 'CLEAR_FORM'});
 			} else {
+				console.log(values, userId);
 				setData({...values, userId});
 				dispatchForm({type: 'CLEAR_FORM'});
 			}
 		}
-	}, [isFormReadyToSubmit, values, setData]);
+	}, [isFormReadyToSubmit]);
 
 	const changePost = (e) => {
 		dispatchForm({type: 'CHANGE_POST', payload: {
