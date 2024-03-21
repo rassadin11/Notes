@@ -1,0 +1,7 @@
+.journal-list {
+    margin-top: 30px;
+}
+
+.journal-list > *:not(:last-child) {
+    margin-bottom: 20px;
+}

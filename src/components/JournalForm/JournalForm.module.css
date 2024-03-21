@@ -1,0 +1,90 @@
+.journal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-wrapper input {
+    width: calc(100% - 50px);
+}
+
+.save {
+    background: transparent;
+    border: none;
+    padding: 5px;
+    width: 40px;
+    height: 40px;    
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-family: Source Sans Pro;
+    font-weight: 600;
+    outline: none;
+    color: #fff;
+}
+
+.input_title {
+    font-size: 32px;
+}
+
+.invalid {
+    border: 1px solid red;
+    background: rgb(117, 6, 6);
+}
+
+.textarea {
+    font-size: 16px;
+    width: 100%;
+    resize: none;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+.submitButton {
+    display: inline;
+}
+
+.circle {
+ height: 100%;
+ width: 100%;
+ position: absolute;
+ top: 0;
+ left: 0;
+ padding: 3px;
+ transform: rotate(-90deg);
+ transition: transform 1000ms ease;
+}
+
+.foreground {
+    fill: transparent;
+    stroke-dasharray: 180;
+    stroke-dashoffset: 180;
+    stroke: #727272;
+    transition: all 1500ms ease;
+}
+
+.circle:hover {
+    transform: rotate(90deg);
+}
+
+.circle:hover .foreground {
+    stroke-dashoffset: 0;
+}
+
+.circle:hover .line {
+    stroke: #727272;
+}
